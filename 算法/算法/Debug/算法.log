@@ -1,0 +1,4 @@
+﻿  Vector.cpp
+E:\C++\算法\算法\Vector.cpp(54,21): warning C4018: “<”: 有符号/无符号不匹配
+E:\C++\算法\算法\Vector.cpp(80,21): warning C4018: “<”: 有符号/无符号不匹配
+  算法.vcxproj -> E:\C++\算法\Debug\算法.exe

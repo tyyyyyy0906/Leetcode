@@ -1,7 +1,7 @@
 /******************************************************************************
-* leetcodeÌâÄ¿(Êı×éÀà)£º
-*	leetcode:#1550(´æÔÚÁ¬ĞøÈı¸öÆæÊıµÄÊı×é). -> threeConsecutiveOdds():
-*   leetcode:#219 (¸ø¶¨Ò»¸öÕûÊıÊı×éarrºÍÒ»¸öÕûÊık,ÅĞ¶ÏÊı×éÖĞÊÇ·ñ´æÔÚÁ½¸ö²»Í¬µÄË÷ÒıiºÍj£¬Ê¹µÃarr[i] = arr[j],²¢ÇÒiºÍjµÄ²îµÄ¾ø¶ÔÖµÖÁ¶àÎªk). -> containsNearbyDuplicate()
+* leetcodeé¢˜ç›®(æ•°ç»„ç±»)ï¼š
+*   leetcode:#1550(å­˜åœ¨è¿ç»­ä¸‰ä¸ªå¥‡æ•°çš„æ•°ç»„). -> threeConsecutiveOdds():
+*   leetcode:#219 (ç»™å®šä¸€ä¸ªæ•´æ•°æ•°ç»„arrå’Œä¸€ä¸ªæ•´æ•°k,åˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å­˜åœ¨ä¸¤ä¸ªä¸åŒçš„ç´¢å¼•iå’Œjï¼Œä½¿å¾—arr[i] = arr[j],å¹¶ä¸”iå’Œjçš„å·®çš„ç»å¯¹å€¼è‡³å¤šä¸ºk). -> containsNearbyDuplicate()
 
 
 
@@ -15,7 +15,7 @@
 #include <unordered_map>
 
 /// <summary>
-/// ÀûÓÃstd::set keyµÄÎ¨Ò»ĞÔ½øĞĞÊı×éÈ¥ÖØ
+/// åˆ©ç”¨std::set keyçš„å”¯ä¸€æ€§è¿›è¡Œæ•°ç»„å»é‡
 /// </summary>
 /// <param name="arr"></param>
 void vectorUniqueMethodA(std::vector<int>* arr) {
@@ -25,12 +25,12 @@ void vectorUniqueMethodA(std::vector<int>* arr) {
 	arr->assign(set_.begin(), set_.end());
 
 	for (const auto &it : *arr) {
-		std::cout << "vectorUnique È¥ÖØ½á¹û = " << it << std::endl;
+		std::cout << "vectorUnique å»é‡ç»“æœ = " << it << std::endl;
 	}
 }
 
 /// <summary>
-/// ÀûÓÃstd::vectorµÄ½Ó¿ÚeraseºÍstd::uniqueÊµÏÖÈ¥ÖØ
+/// åˆ©ç”¨std::vectorçš„æ¥å£eraseå’Œstd::uniqueå®ç°å»é‡
 /// </summary>
 /// <param name="arr"></param>
 void vectorUniqueMethodB(std::vector<int>* arr) {
@@ -40,14 +40,14 @@ void vectorUniqueMethodB(std::vector<int>* arr) {
 	arr->erase(std::unique(arr->begin(), arr->end()), arr->end());
 
 	for (const auto &it : *arr) {
-		std::cout << "vectorUniqueAnother È¥ÖØ½á¹û = " << it << std::endl;
+		std::cout << "vectorUniqueAnother å»é‡ç»“æœ = " << it << std::endl;
 	}
 }
 
 namespace AlgorithmVector {
 
 	///leetcode 1550(https://leetcode-cn.com/problems/three-consecutive-odds/)
-	///¸øÄãÒ»¸öÕûÊıÊı×é arr£¬ÇëÄãÅĞ¶ÏÊı×éÖĞÊÇ·ñ´æÔÚÁ¬ĞøÈı¸öÔªËØ¶¼ÊÇÆæÊıµÄÇé¿ö£ºÈç¹û´æÔÚ£¬Çë·µ»Ø true £»·ñÔò£¬·µ»Ø false
+	///ç»™ä½ ä¸€ä¸ªæ•´æ•°æ•°ç»„ arrï¼Œè¯·ä½ åˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å­˜åœ¨è¿ç»­ä¸‰ä¸ªå…ƒç´ éƒ½æ˜¯å¥‡æ•°çš„æƒ…å†µï¼šå¦‚æœå­˜åœ¨ï¼Œè¯·è¿”å› true ï¼›å¦åˆ™ï¼Œè¿”å› false
 	bool threeConsecutiveOdds(std::vector<int>* arr) {
 		if (arr->size() < 3) return false;
 		int cout = 0;
@@ -59,11 +59,11 @@ namespace AlgorithmVector {
 	}
 
 	/// leetcode 219(https://leetcode-cn.com/problems/contains-duplicate-ii/)
-	/// ¸ø¶¨Ò»¸öÕûÊıÊı×éarrºÍÒ»¸öÕûÊık,ÅĞ¶ÏÊı×éÖĞÊÇ·ñ´æÔÚÁ½¸ö²»Í¬µÄË÷ÒıiºÍj£¬Ê¹µÃarr[i] = arr[j],²¢ÇÒiºÍjµÄ²îµÄ¾ø¶ÔÖµÖÁ¶àÎªk;
+	/// ç»™å®šä¸€ä¸ªæ•´æ•°æ•°ç»„arrå’Œä¸€ä¸ªæ•´æ•°k,åˆ¤æ–­æ•°ç»„ä¸­æ˜¯å¦å­˜åœ¨ä¸¤ä¸ªä¸åŒçš„ç´¢å¼•iå’Œjï¼Œä½¿å¾—arr[i] = arr[j],å¹¶ä¸”iå’Œjçš„å·®çš„ç»å¯¹å€¼è‡³å¤šä¸ºk;
 	bool containsNearbyDuplicate(std::vector<int>* arr, int k) {
 		if (arr->size() < 2) return false;
 
-		//·½·¨Ò»ÊÊÓÃÓÚĞ¡Êı¾İÁ¿²Ù×÷£º¶ÔÓÚ´óÊı¾İÁ¿ºÄÊ±±È½ÏÑÏÖØ
+		//æ–¹æ³•ä¸€é€‚ç”¨äºå°æ•°æ®é‡æ“ä½œï¼šå¯¹äºå¤§æ•°æ®é‡è€—æ—¶æ¯”è¾ƒä¸¥é‡
 		/*for (int i = 0; i < arr->size(); i++) {
 			for (int j = i + 1; j < arr->size(); j++) {
 				if (arr->at(i) == arr->at(j)) {
@@ -74,11 +74,11 @@ namespace AlgorithmVector {
 		}
 		return false;*/
 
-		//·½·¨¶ş
+		//æ–¹æ³•äºŒ
 		std::unordered_map<int, int> map;
 
 		for (int i = 0; i < arr->size(); i++) {
-			if (map.find(arr->at(i)) != map.end()) {  // ÕÒµ½À²
+			if (map.find(arr->at(i)) != map.end()) {  // æ‰¾åˆ°å•¦
 				if (i - map[arr->at(i)] <= k) return true;
 				else map[arr->at(i)] = i;
 			} else map[arr->at(i)] = i;
@@ -95,27 +95,27 @@ int main() {
 
 	using namespace AlgorithmVector;
 	{
-		///leetcode 1550²âÊÔÓÃÀı
+		///leetcode 1550æµ‹è¯•ç”¨ä¾‹
 		std::vector<int> leetcode1550_A = { 1, 2, 3, 5, 7 };
 		std::vector<int> leetcode1550_B = { 1, 2, 3, 4, 7 };
 		std::vector<int> leetcode1550_C = { 1, 2, 2 };
 		std::vector<int> leetcode1550_D = { 1 };
 		std::vector<int> leetcode1550_E = { 1, 3, 5, 7, 9 };
 		std::vector<int> leetcode1550_F = { 1, 2, 34, 3, 4, 5, 7, 23, 12 };
-		std::cout << "leetcode 1550²âÊÔÓÃÀı 1 = " << threeConsecutiveOdds(&leetcode1550_A) << std::endl;
-		std::cout << "leetcode 1550²âÊÔÓÃÀı 2 = " << threeConsecutiveOdds(&leetcode1550_B) << std::endl;
-		std::cout << "leetcode 1550²âÊÔÓÃÀı 3 = " << threeConsecutiveOdds(&leetcode1550_C) << std::endl;
-		std::cout << "leetcode 1550²âÊÔÓÃÀı 4 = " << threeConsecutiveOdds(&leetcode1550_D) << std::endl;
-		std::cout << "leetcode 1550²âÊÔÓÃÀı 5 = " << threeConsecutiveOdds(&leetcode1550_E) << std::endl;
-		std::cout << "leetcode 1550²âÊÔÓÃÀı 6 = " << threeConsecutiveOdds(&leetcode1550_F) << std::endl;
+		std::cout << "leetcode 1550æµ‹è¯•ç”¨ä¾‹ 1 = " << threeConsecutiveOdds(&leetcode1550_A) << std::endl;
+		std::cout << "leetcode 1550æµ‹è¯•ç”¨ä¾‹ 2 = " << threeConsecutiveOdds(&leetcode1550_B) << std::endl;
+		std::cout << "leetcode 1550æµ‹è¯•ç”¨ä¾‹ 3 = " << threeConsecutiveOdds(&leetcode1550_C) << std::endl;
+		std::cout << "leetcode 1550æµ‹è¯•ç”¨ä¾‹ 4 = " << threeConsecutiveOdds(&leetcode1550_D) << std::endl;
+		std::cout << "leetcode 1550æµ‹è¯•ç”¨ä¾‹ 5 = " << threeConsecutiveOdds(&leetcode1550_E) << std::endl;
+		std::cout << "leetcode 1550æµ‹è¯•ç”¨ä¾‹ 6 = " << threeConsecutiveOdds(&leetcode1550_F) << std::endl;
 
-		///leetcode 219²âÊÔÓÃÀı
+		///leetcode 219æµ‹è¯•ç”¨ä¾‹
 		std::vector<int> leetcode219_A = { 1, 2, 3, 1 };
 		std::vector<int> leetcode219_B = { 1, 0, 1, 1 };
 		std::vector<int> leetcode219_C = { 1, 2, 3, 1, 2, 3 };
-		std::cout << "leetcode 219²âÊÔÓÃÀı 1 = " << containsNearbyDuplicate(&leetcode219_A, 3) << std::endl;
-		std::cout << "leetcode 219²âÊÔÓÃÀı 2 = " << containsNearbyDuplicate(&leetcode219_B, 1) << std::endl;
-		std::cout << "leetcode 219²âÊÔÓÃÀı 3 = " << containsNearbyDuplicate(&leetcode219_C, 2) << std::endl;
+		std::cout << "leetcode 219æµ‹è¯•ç”¨ä¾‹ 1 = " << containsNearbyDuplicate(&leetcode219_A, 3) << std::endl;
+		std::cout << "leetcode 219æµ‹è¯•ç”¨ä¾‹ 2 = " << containsNearbyDuplicate(&leetcode219_B, 1) << std::endl;
+		std::cout << "leetcode 219æµ‹è¯•ç”¨ä¾‹ 3 = " << containsNearbyDuplicate(&leetcode219_C, 2) << std::endl;
 	}
 
 	return 0;
